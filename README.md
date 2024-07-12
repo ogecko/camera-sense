@@ -5,16 +5,26 @@ AI Camera with scene understanding.
 This application is based on the following hardware components:
 * Raspberry Pi Zero 2 W (Wireless)
 * Raspberry Pi Camera Module 3
+* Raspberry Pi Zero 2 W Enclosure (requires filing of camera hole to fit Camera Module 3)
 * VEEKTOMX Mini Power Bank 10000mAh
 
 ## Software Architecture
 The web server is based on FastAPI/Python3, while the client web application is based on Quasar/Vue/Node/Javascript. 
-The web application allows the remote control of the camera to 
+The web application allows the remote control of the camera for 
 * Initial setup of 1 picture every 10s, looping
 * Timelapse photography with custom defined interval, duration and naming
 * Identification of Level indicators to analyse using April Tags (todo)
 * Identification of areas to monitor for change (todo)
 * Alerting the client app of Level Reached, Scene Change (todo)
+
+## Development Environment
+The Raspberry Pi Zero 2 W can be used for the whole development and runtime environemnts. 
+VS Code (Remote) can be used to easily develop the api and app within the embedded platform.
+The maseter makefile provides the following targets
+* `make dev-server` - Start the server api and monitor for hot changes
+* `make dev-client` - Start the web client app and monitor for hot change
+* `make build-client` - Build and package the web client app into dist/spa
+* `make run-server`- Start the production server and host the api and web client
 
 ## Instalation
 A step-by-step tutorial for setting up a Raspberry Pi Zero W 2 computer as a vision system
