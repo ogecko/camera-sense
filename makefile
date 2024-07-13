@@ -12,6 +12,8 @@ stirfry:
 	python3 capture.py -d ./data/pizza -f stirfry -t 240 -i 0.25
 april:
 	python3 april.py
+stop: 
+	pkill -f /usr/bin/python3
 dev-server: 
 	cd api; ~/.local/bin/fastapi dev server.py 
 dev-client: 
