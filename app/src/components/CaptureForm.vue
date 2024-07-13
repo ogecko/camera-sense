@@ -8,7 +8,7 @@
 
       <div v-if="!status.isRecording" class="q-gutter-md">
         <q-btn-group>
-          <q-btn @click="onTest" icon="photo_camera"  color="deep-orange-10"  />
+          <q-btn @click="onTest" icon="photo_camera"  color="deep-orange-10"  :to="'/'"/>
           <q-btn @click="onStart" icon="circle"   label="Rec" color="deep-orange-7"  />
           <q-btn @click="onReset"  icon="restore"  label="Reset" color="teal-9" />
         </q-btn-group>
