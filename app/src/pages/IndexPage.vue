@@ -1,14 +1,17 @@
 <template>
-  <q-page class="flex flex-center">
-    <!-- <q-img
-      src="proof_2024-05-06_11h38_00115-tagged.jpg"
-      fit="contain" spinner-color="white"
-    /> -->
-    <q-img :src="imageUrl" fit="contain" spinner-color="white">
-      <div class="absolute-top text-center">
-        {{ imageName }}
+  <q-page>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-8 col-lg-9 col-xl-10">
+        <q-img :src="imageUrl" fit="contain" spinner-color="white">
+          <div class="absolute-top text-center">
+            {{ imageName }}
+          </div>
+        </q-img>
       </div>
-    </q-img>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+        <CaptureForm />
+      </div>
+    </div>    
   </q-page>
 </template>
 
@@ -18,6 +21,7 @@
   import { useRoute } from 'vue-router'
   import { ref, computed } from 'vue'
   import { useStatusStore } from '../stores/status'
+  import CaptureForm from 'components/CaptureForm.vue'
 
 
   defineOptions({

@@ -24,10 +24,11 @@ The web application allows the remote control of the camera for
 The Raspberry Pi Zero 2 W can be used for the whole development and runtime environemnts. 
 VS Code (Remote) can be used to easily develop the api and app within the embedded platform.
 The master makefile provides the following targets
-* `make dev-server` - Start the server api and monitor for hot changes
-* `make dev-client` - Start the web client app and monitor for hot change
-* `make build-client` - Build and package the web client app into dist/spa
-* `make run-server`- Start the production server and host the api and web client
+* `make dev-server` - Start the server api and monitor for hot changes. http://localhost:8000/api and http://localhost:8000/docs
+* `make dev-client` - Start the web client app and monitor for hot change. http://localhost:9000/
+* `make build-client` - Build and package the web client app into dist/spa. 
+* `make run-server`- Start the production server and host the api and web client. http://localhost:8000/
+* `make stop` - Stop the production or development server and any python3 app
 
 ## Instalation
 A step-by-step tutorial for setting up a Raspberry Pi Zero W 2 computer as a vision system
