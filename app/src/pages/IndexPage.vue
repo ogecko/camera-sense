@@ -1,14 +1,14 @@
 <template>
   <q-page>
     <div class="row">
-      <div class="col-12 col-sm-6 col-md-8 col-lg-9 col-xl-10">
+      <div class="col-12 col-sm-7 col-md-8 col-lg-9 col-xl-10">
         <q-img :src="imageUrl" fit="contain" spinner-color="white">
           <div class="absolute-top text-center">
             {{ imageName }}
           </div>
         </q-img>
       </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+      <div class="col-12 col-sm-5 col-md-4 col-lg-3 col-xl-2">
         <CaptureForm />
       </div>
     </div>    
